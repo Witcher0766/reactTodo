@@ -1,3 +1,5 @@
+
+
 *{
   margin: 0;
   padding: 0;
@@ -5,23 +7,27 @@
 }
 
 html{
-  background-color: #485460;
+  background-color: #ced6e0;
+}
+
+.main-div{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
 
 
 .child-div {
-  border-radius: 10px;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  background-color: #808e9b;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #f1f2f6;
   width:40vw;
   margin: auto;
-  transform: translateY(20%);
-  min-height: 50vh;
-  display: flex;
+  min-height: 60vh;
   flex-direction: column;
-  /* justify-content: center; */
   text-align: center;
 }
 
@@ -42,16 +48,16 @@ figure img {
   position: relative;
 }
 .add-items input{
-  padding: 7px;
+  padding: 10px 5px 10px 5px;
   width: 70%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 
 .show-items{
-  font-size: 20px;
+  /* font-size: 20px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -62,27 +68,29 @@ figure img {
   display: flex;
   justify-content: flex-start;
   position: relative;
-  background-color: #74b9ff;
+  background-color: #ced6e0;
   width: 70%;
   margin: auto;
-  border-radius: 10px;
-  padding: 0px 5px 5px 5px;
+  border-radius: 5px;
+  padding: 7px 5px 7px 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  margin: 2px 0px 2px 0px;
+  margin: 3px 0px 3px 0px;
 }
 .each-item h3 {
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
-  padding-left: 3px;
+  /* padding-left: 3px; */
+  font-weight: 500;
+  color: #2f3542;
 }
 
 .delete {
   position: absolute;
   right: 3px;
-  color: black;
+  color: #2f3542;
   cursor: pointer;
   transition: all 0.3s;
-  top:3px;
+  text-align: center;
 }
 .delete:hover {
   color: red;
@@ -92,10 +100,10 @@ figure img {
 .edit {
   position: absolute;
   right: 35px;
-  color: black;
+  color: #2ed573;
   cursor: pointer;
   transition: all 0.3s;
-  top:3px;
+  text-align: center;
 }
 .edit:hover {
   color: burlywood;
@@ -119,7 +127,7 @@ figure img {
   margin-top: 19px;
   position: absolute;
   right: 16%;
-  bottom: 20%;
+  bottom: 26%;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -134,30 +142,47 @@ figure img {
   margin: 10px 0px 10px 0px;
   border: none;
   background-color: #485460;
-  transition: all 0.3s;
+  transition: all 0.3s ease-out;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
   color:white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .btn:hover {
  
   background-color: #d2dae2;
-  color: black;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  
+  color: black;  
 }
 
 
 @media screen and (max-width: 905px){
+  
 
   .child-div{
-    width: 100%;
+    width: 90%;
+    /* margin-top: 30px; */
   }
+
+  .add-items input{
+    font-size: 20px;
+  }
+
+  .each-item h3 {
+    font-size: 20px;
+  }
+
+  .btn{
+    font-size: 18px;
+  }
+
+
 
 }
 @media screen and (max-width: 467px){
+
+  .child-div {
+    padding: 10px;
+  }
 
   figcaption{
     font-size: 25px;
@@ -166,6 +191,11 @@ figure img {
 
   .add-items input{
     width: 100%;
+    font-size: 18px;
+  }
+
+  .each-item h3 {
+    font-size: 18px;
   }
   
   .add{
@@ -176,6 +206,12 @@ figure img {
     cursor: pointer;
     transition: all 0.3s;
   }
+
+  figure img {
+    width: 35%;
+
+  }
+  
 
 
   .each-item{
